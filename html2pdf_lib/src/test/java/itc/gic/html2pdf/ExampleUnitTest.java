@@ -1,4 +1,4 @@
-package itc.gic.app;
+package itc.gic.html2pdf;
 
 import org.junit.Test;
 
