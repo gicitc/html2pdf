@@ -3,4 +3,5 @@
     <string name="no_script_to_pdf">To PDF (no script)</string>
     <string name="scrip_to_pdf">To PDF (scripted)</string>
     <string name="http_google">https://google.com/</string>
+    <string name="search">Search</string>
 </resources>

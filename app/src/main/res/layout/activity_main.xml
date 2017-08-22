@@ -6,21 +6,42 @@
     android:layout_height="match_parent"
     tools:context="itc.gic.html2pdf.app.MainActivity">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/http_google"
-        android:id="@+id/et_search"
-        android:inputType="textWebEditText"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal"
+        android:id="@+id/ll_searchs">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="@string/http_google"
+            android:id="@+id/et_search"
+            android:inputType="textWebEditText"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:onClick="doSearch"
+            android:contentDescription="@string/search"/>
+    </LinearLayout>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/wv_main"
+        android:layout_above="@+id/ll_actions"
+        android:layout_below="@+id/ll_searchs"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll_actions">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/b_no_script_to_pdf"
-            android:text="@string/no_script_to_pdf"/>
+            android:text="@string/no_script_to_pdf"
+            android:onClick="doToPdfNoScript"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
